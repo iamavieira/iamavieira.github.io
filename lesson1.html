@@ -1,0 +1,49 @@
+<!-- 1#
+A structure of a html page is similar to a tree. -->
+<!-- 	html (root)
+			/	\
+  		head	body (branches)
+ -->
+<!-- <html>
+	<head></head> head is where we put any metadata and style of our website
+	<body></body> content of our website
+</html> -->
+<!-- When we're writing html, we are just adding branches to these two branches.
+ -->
+<!-- 2# We add elements or tags to our branchs head and body.
+	They can be applied in three ways: -->
+
+<!-- <element> #Self closed
+<element>value</element> #bind with a value
+<element attribute="value">value</element>  -->
+
+<!-- elements can have multiple attributes and multiple attributes can have multiple values.
+ -->
+ <!-- 3# -->
+<!DOCTYPE html> <!--#this element tells the browser that we are using html 5; If you omit this option, the browser will decide upon which version to use.
+ --><html>
+	<head>
+<!-- 		attribute  value
+				||		||-->
+		<meta charset="UTF-8">
+
+		<!-- #assign the title to the tab -->
+		<title>hello, world!</title>
+
+		<!-- #How to handle the website in mobile devices! -->
+		<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- #this is a tag -->
+
+<!-- css is a combination of a selector, a property, and then a value as follows: -->
+<!--we selected the p from paragraph element, property color and value as green;-->
+		<style>
+
+p { color: green; }
+
+		</style>
+
+	</head>
+	<body>
+		<p>hello,world!</p> <!-- <p> paragraph </p> -->
+	</body>
+</html>
+

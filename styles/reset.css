@@ -1,0 +1,19 @@
+/*reset all browser standard properties
+Help start our website with a blank slate*/
+
+/*:root is another way to say :html, remember the tree analogy;*/
+/*the font property inherint from the parent branch, 
+so set once, apply for everybody else
+*/
+:root { font: 20px/1.2 "Roboto", sans=serif; }
+
+/*body and *(all) the body's children(Everything inside the branch body)*/ 
+body,
+body * {
+	margin: 				unset;
+	box-sizing:				unset;
+	padding: 				unset;
+	font-size: 				unset;
+	color: 					unset;
+	text-decoration: 		unset;
+}

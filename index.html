@@ -1,1 +1,56 @@
-Hello World
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"> 
+
+		<title>hello, world!</title>
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- importing css files -->
+
+		<!-- from internet -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,5001,700,900,9001">
+		<!-- local files -->
+		<link rel="stylesheet" href="styles/reset.css">
+		<link rel="stylesheet" href="styles/debug.css">
+		<!-- This css we want to keep permantely -->
+		<style>
+
+article {
+	display: grid;
+	grid-template-columns: 1fr 0.5in [start] 7.5in [end] 0.5in 1fr; /*We define three columns. Fr is a fraction unit*/
+	/*minmax is there to tell our view to just display the middle section if grid is < than 8.5. If it is more it shows the remainder*/
+	/*If we use a media query there's really no reason to use minmax()*/
+
+	height: 100vh; /*temporary fix*/
+
+	padding: 0.5in 0; /*The first number is for the bottom and the top while the second number refers to left and right*/
+}
+
+article * { grid-column: start / end; } /*1 1fr 2 1fr 3 1fr 4*/ 
+
+
+@media (max-width: 8.5in) {
+
+article{ grid-template-columns: 1fr 5% [start] 90% [end] 5% 1fr; }
+
+}
+
+		</style>
+
+	</head>
+	<body>
+	<article>
+		<!-- let's use a utility class, to define temporarily css -->
+		<!-- So we define a attribute, in this case a class, that we can use to style -->
+			<p class="debug-center">ARTICLE</p>
+		</article>
+		<article>
+		<!-- let's use a utility class, to define temporarily css -->
+		<!-- So we define a attribute, in this case a class, that we can use to style -->
+			<p class="debug-center">ARTICLE</p>
+		</article>
+	</body>
+</html>	
+
