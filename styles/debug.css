@@ -7,9 +7,10 @@ body *{
 
 /*a value given to a attribute, in this case a class="debug-center". It has the prefix "." to 
 differentiate from a element as the body element above.*/
-/*You use this attribute inside a element*/
+/*You use this attribute inside an element. This is more precisely a class*/
+/*for position of text in the paragraph*/
 .debug-center {
-	display: 			flex;
-	justify-content: 	center; /*horizontaly*/
-	align-items: 		center;
+	display: 			flex; /*a faster way that we can position elements inside a box*/
+	justify-content: 	center; /*horizontally*/
+	align-items: 		center; /*vertically*/
 }

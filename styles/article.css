@@ -1,0 +1,18 @@
+article {
+	display: grid;
+	grid-template-columns: 1fr 0.5in [start] 1.25in 5in 1.25in [end] 0.5in 1fr; /*We define three columns. Fr is a fraction unit*/
+	/*minmax is there to tell our view to just display the middle section if grid <= 8.5. If it is more, it shows the remainder*/
+	/*If we use a media query there's really no reason to use minmax()*/
+
+	padding: 5% 0; /*The first number is for the bottom and the top while the second number refers to left and right*/
+
+	
+}
+article * { grid-column: start / end; } /*1 1fr 2 1fr 3 1fr 4*/ 
+
+
+@media (max-width: 8.5in) {
+
+article{ grid-template-columns: 1fr 5% [start] 15% 60% 15% [end] 5% 1fr; }
+
+}

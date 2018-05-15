@@ -13,44 +13,51 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,5001,700,900,9001">
 		<!-- local files -->
 		<link rel="stylesheet" href="styles/reset.css">
-		<link rel="stylesheet" href="styles/debug.css">
+		<link rel="stylesheet" href="styles/-debug.css">
+		<link rel="stylesheet" href="styles/article.css">
+		<link rel="stylesheet" href="styles/article-image.css">
 		<!-- This css we want to keep permantely -->
 		<style>
 
-article {
-	display: grid;
-	grid-template-columns: 1fr 0.5in [start] 7.5in [end] 0.5in 1fr; /*We define three columns. Fr is a fraction unit*/
-	/*minmax is there to tell our view to just display the middle section if grid is < than 8.5. If it is more it shows the remainder*/
-	/*If we use a media query there's really no reason to use minmax()*/
+h2, p:not(:last-child) {margin-bottom: 2.4rem} /*The same as say 2 lines */
 
-	height: 100vh; /*temporary fix*/
-
-	padding: 0.5in 0; /*The first number is for the bottom and the top while the second number refers to left and right*/
-}
-
-article * { grid-column: start / end; } /*1 1fr 2 1fr 3 1fr 4*/ 
-
-
-@media (max-width: 8.5in) {
-
-article{ grid-template-columns: 1fr 5% [start] 90% [end] 5% 1fr; }
-
-}
-
+h1	{font: 700 2.0rem/1.2 "Roboto"; }
+h2	{font: 400 1.5rem/1.2 "Roboto"; }
+time{font: 700 1.0rem/1.2 "Roboto"; }
+h3	{font: 700 1.0rem/1.2 "Roboto"; }
+p 	{font: 400 1.0rem/1.5 "Roboto"; }
+a 	{font: 500 1.0rem/1.5 "Roboto"; }
 		</style>
 
 	</head>
 	<body>
-	<article>
-		<!-- let's use a utility class, to define temporarily css -->
-		<!-- So we define a attribute, in this case a class, that we can use to style -->
-			<p class="debug-center">ARTICLE</p>
-		</article>
-		<article>
-		<!-- let's use a utility class, to define temporarily css -->
-		<!-- So we define a attribute, in this case a class, that we can use to style -->
-			<p class="debug-center">ARTICLE</p>
+
+		<article id="the-cosmos">
+			<h1><a href="#the-cosmos">The <em>Cosmos</em> is all there is</a></h1>
+			<h2>Or even was, or will ever be</h2>
+
+			<time datetime="05-15-2018">MAY 15, 2018</time>
+			<p>
+				<em>A generation ago</em>, the astronomer <a href="https://en.wikipedia.org/wiki/carl_sagan">Carl Sagan</a> stood here and launched hundreds of millions of us on a great adventure: The exploration of the universe by science.
+				It's time to get going again.
+				We're sbout to begin a journey that will take us from the infinitesimal to the infinite, from the dawn of time to the distant future.
+			</p>
+
+			<h3>COSMOS IS ALSO A STORY ABOUT US</h3>
+			<p>
+				It's the saga of how wandering bands of hunters and gathers found their eay to the stars, one adventure with many heroes.
+				kdwjduwehfuewh feuhf ufrehfuer hfuerwhfue rfurehfuerhfuerhfuerhufieruf uuuuuuuuuuuuuuuuuuuuuuuuuuu uuufhefuerfherwufwehfuwifhew ufhwufuhefwehfkjewnfje wfjlerbfherwbfrhjbfq erhbfbfebfrbfqerbfhqbfhjerbfqhj bfhbrfjqrbjbfehjebfhbwjhfbqwe fbqewhfbqwhjbfwhjbfqerh jbfhjqrwbfjw bfjbwfhbwjl wbfhbjlwfblqwbfhbw elbfqhbrfjlhbwjhfbwjhbf jewhbfjhbewjfhbwbfjwhbfwhjb fjhwbfbwfbw hjbfwbfbqwlfbewef bwjhebfjwbfjbwjfbhhjbh bbbhwbfjewjb fewjeb h fhjbfjlqwheb fjhbfjhe fhbw ejfbwelbfhb.
+				<strong>Accept these terms, and the cosmos is yours.</strong>
+			</p>
 		</article>
 	</body>
 </html>	
 
+		<!-- let's use a utility class, to define temporarily css -->
+		<!-- So we define a attribute, in this case a class, that we can use to style -->
+			<!-- <p class="debug-center">ARTICLE</p> --><!-- 
+
+			<img class="size-4" src="https://mikeorzen.com/wp-content/uploads/2015/10/cosmos.jpg">
+			<img class="size-3" src="https://mikeorzen.com/wp-content/uploads/2015/10/cosmos.jpg">
+			<img class="size-2" src="https://mikeorzen.com/wp-content/uploads/2015/10/cosmos.jpg">
+			<img class="size-1" src="https://mikeorzen.com/wp-content/uploads/2015/10/cosmos.jpg"> -->
