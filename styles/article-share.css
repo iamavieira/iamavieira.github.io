@@ -1,0 +1,12 @@
+/*one for the class*/
+.share {
+		display: 			flex; /*a faster way that we can position elements inside a box*/
+		justify-content: 	center; /*horizontally*/
+}
+
+/*another for it's content*/
+.share img {
+	padding: 0.75rem;
+	width:   2.00rem;
+	height:  2.00rem;
+}
