@@ -3,7 +3,7 @@ Help start our website with a blank slate*/
 
 /*:root is another way to say :html, remember the tree analogy;*/
 /*the font property inherint from the parent branch, 
-so set once, apply for everybody else
+so set once, apply for everybody else.
 */
 :root { font: 20px/1.2 "Roboto", sans=serif; }/*1.2 == 20 * 1.2 == 24px
 

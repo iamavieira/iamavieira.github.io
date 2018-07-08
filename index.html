@@ -1,94 +1,200 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8"> 
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="UTF-8"> 
 
-		<title>hello, world!</title>
-	
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+			<title>hello, world!</title>
+		
+			<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<!-- importing css files -->
+			<!-- importing css files -->
 
-		<!-- from internet -->
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,5001,700,900,9001">
-		<!-- local files -->
-		<link rel="stylesheet" href="styles/reset.css">
-		<link rel="stylesheet" href="styles/-debug.css">
-		<link rel="stylesheet" href="styles/article.css">
-		<link rel="stylesheet" href="styles/article-figure.css">
-		<link rel="stylesheet" href="styles/article-text.css">
-		<link rel="stylesheet" href="styles/article-share.css">
-		<!-- This css we want to keep permantely -->
-	</head>
-	<body>
-		<article id="the-cosmos-1">
-			<h1><a href="#the-cosmos-1">The <em>Cosmos</em> is all there is</a></h1>
-			<h2>Or even was, or will ever be</h2>
+			<!-- from internet -->
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,5001,700,900,9001">
+			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+			<!-- local files -->
+			<link rel="stylesheet" href="styles/reset.css">
+			<link rel="stylesheet" href="-styles/debug.css">
+			<link rel="stylesheet" href="styles/article.css">
+			<link rel="stylesheet" href="styles/article-figure.css">
+			<link rel="stylesheet" href="styles/article-text.css">
+			<link rel="stylesheet" href="styles/article-share.css">
+			<!-- This css we want to keep permantely -->
+			<style>
+				
+				.topnav {
+    				background-color: hsla(0,0%,0%, 0.4);
+    				overflow: hidden;
+    				position: fixed; /* Set the navbar to fixed position */
+    				top: 0; /* Position the navbar at the top of the page */
+    				width: 100%; /* Full width */
+				}
 
-			<time datetime="05-15-2018">MAY 15, 2018</time>
-			<p>
-				<em>A generation ago</em>, the astronomer <a href="https://en.wikipedia.org/wiki/carl_sagan">Carl Sagan</a> stood here and launched hundreds of millions of us on a great adventure: The exploration of the universe by science.
-				It's time to get going again.
-				We're sbout to begin a journey that will take us from the infinitesimal to the infinite, from the dawn of time to the distant future.
-			</p>
+				/* Style the links inside the navigation bar */
+				.topnav a {
+    				 float: right;
+    				 display: block;
+    				 color: #f2f2f2;
+    				 text-align: center;
+    				 padding: 14px 16px;
+    				 text-decoration: none;
+    				 font-size: 17px;
+				}
 
-			<figure class="size-2">
-				<img src="https://mikeorzen.com/wp-content/uploads/2015/10/cosmos.jpg">
-			</figure>
+				.topnav a:hover:not(.active) {
+    				background-color: #ddd;
+    				color: black;
+				}
 
-			<figcaption><p>The <em>Cosmos</em>.</p></figcaption>
+				.active {    			
+    				background-color: black;
+    				color: black;
+    			}
 
-			<h3>COSMOS IS ALSO A STORY ABOUT US</h3>
-			<p>
-				It's the saga of how wandering bands of hunters and gathers found their eay to the stars, one adventure with many heroes.
-				kdwjduwehfuewh feuhf ufrehfuer hfuerwhfue rfurehfuerhfuerhfuerhufieruf uuuuuuuuuuuuuuuuuuuuuuuuuuu uuufhefuerfherwufwehfuwifhew ufhwufuhefwehfkjewnfje wfjlerbfherwbfrhjbfq erhbfbfebfrbfqerbfhqbfhjerbfqhj bfhbrfjqrbjbfehjebfhbwjhfbqwe fbqewhfbqwhjbfwhjbfqerh jbfhjqrwbfjw bfjbwfhbwjl wbfhbjlwfblqwbfhbw elbfqhbrfjlhbwjhfbwjhbf jewhbfjhbewjfhbwbfjwhbfwhjb fjhwbfbwfbw hjbfwbfbqwlfbewef bwjhebfjwbfjbwjfbhhjbh bbbhwbfjewjb fewjeb h fhjbfjlqwheb fjhbfjhe fhbw ejfbwelbfhb.
-				<strong>Accept these terms, and the cosmos is yours.</strong>
-			</p>
+    			.topnav a:not(.active) {display: none;}
+  				
+  				.topnav a.icon {
+    				float: left;
+   					display: block;
+  				}
+  				.topnav a {
+   					float: none;
+   					text-align: center;
+    			}
+    			
+    			.topnav.responsive {position: fixed; /* Set the navbar to fixed position */
+    				top: 0; /* Position the navbar at the top of the page */
+    				width: 100%; /* Full width */}
+  				
+  				.topnav.responsive .icon {
+    				position: absolute;
+    				left: 0;
+    				top: 0;
+  				}	
+  				
+  				.topnav.responsive a {
+    				float: none;
+    				display: block;  					
+    				text-align: center;
+    			}
 
-			<!-- div is a generic container used when there isn't a semantic meaningful one. --> 
-			<div class="share">
-			<a href=""><img src="images/rebels.svg"></a>
-			<a href=""><img src="images/empire.png"></a>
+
+    			 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+				/*@media screen and (max-width: 8.5in) {
+  					.topnav a:not(.active) {display: none;}
+  					.topnav a.icon {
+    					float: left;
+    					display: block;
+  					}
+  					.topnav a {
+    					float: none;
+    					text-align: center;
+    				}
+				}*/
+
+				
+				/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes 	the topnav look good on small screens (display the links vertically instead of horizontally) */
+				/*@media screen and (max-width: 8.5in) {
+ 					.topnav.responsive {position: relative;}
+  					.topnav.responsive .icon {
+    					position: absolute;
+    					left: 0;
+    					top: 0;
+  					}	
+  					.topnav.responsive a {
+    					float: none;
+    					display: block;
+    					text-align: center;
+    				}			
+				}*/ 
+
+			</style>
+			
+			<script type="text/javascript" src="scripts/topnav.js"></script>
+		
+		</head>
+		
+		<body>
+
+			<div class="topnav" id="myTopnav">	  			  				  		  												
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    				<i class="fa fa-bars"></i>
+   				</a>
+   				<a href="#home" class="active">Home</a>
+   				<a href="#news">News</a>
+				<a href="#contact">Contact</a>				
+				<a href="#about">About</a>  
+
 			</div>
-		</article>
-		<article id="the-cosmos-2">
-			<h1><a href="#the-cosmos-2">The <em>Cosmos</em> is all there is</a></h1>
-			<h2>Or even was, or will ever be</h2>
 
-			<time datetime="05-15-2018">MAY 15, 2018</time>
-			<p>
-				<em>A generation ago</em>, the astronomer <a href="https://en.wikipedia.org/wiki/carl_sagan">Carl Sagan</a> stood here and launched hundreds of millions of us on a great adventure: The exploration of the universe by science.
-				It's time to get going again.
-				We're sbout to begin a journey that will take us from the infinitesimal to the infinite, from the dawn of time to the distant future.
-			</p>
+			<article id="the-cosmos-1">
+				<h1><a href="#the-cosmos-1">The <em>Cosmos</em> is all there is</a></h1>
+				<h2>Or even was, or will ever be</h2>
 
-			<figure class="size-2">
-				<img src="https://mikeorzen.com/wp-content/uploads/2015/10/cosmos.jpg">
-			</figure>
+				<time datetime="05-15-2018">MAY 15, 2018</time>
+				<p>
+					<em>A generation ago</em>, the astronomer <a href="https://en.wikipedia.org/wiki/carl_sagan">Carl Sagan</a> stood here and launched hundreds of millions of us on a great adventure: The exploration of the universe by science.
+					It's time to get going again.
+					We're sbout to begin a journey that will take us from the infinitesimal to the infinite, from the dawn of time to the distant future.
+				</p>
 
-			<figcaption><p>The <em>Cosmos</em>.</p></figcaption>
+				<figure class="size-2">
+					<img src="https://mikeorzen.com/wp-content/uploads/2015/10/cosmos.jpg">
+				</figure>
 
-			<h3>COSMOS IS ALSO A STORY ABOUT US</h3>
-			<p>
-				It's the saga of how wandering bands of hunters and gathers found their eay to the stars, one adventure with many heroes.
-				kdwjduwehfuewh feuhf ufrehfuer hfuerwhfue rfurehfuerhfuerhfuerhufieruf uuuuuuuuuuuuuuuuuuuuuuuuuuu uuufhefuerfherwufwehfuwifhew ufhwufuhefwehfkjewnfje wfjlerbfherwbfrhjbfq erhbfbfebfrbfqerbfhqbfhjerbfqhj bfhbrfjqrbjbfehjebfhbwjhfbqwe fbqewhfbqwhjbfwhjbfqerh jbfhjqrwbfjw bfjbwfhbwjl wbfhbjlwfblqwbfhbw elbfqhbrfjlhbwjhfbwjhbf jewhbfjhbewjfhbwbfjwhbfwhjb fjhwbfbwfbw hjbfwbfbqwlfbewef bwjhebfjwbfjbwjfbhhjbh bbbhwbfjewjb fewjeb h fhjbfjlqwheb fjhbfjhe fhbw ejfbwelbfhb.
-				<strong>Accept these terms, and the cosmos is yours.</strong>
-			</p>
+				<figcaption><p>The <em>Cosmos</em>.</p></figcaption>
 
-			<!-- div is a generic container used when there isn't a semantic meaningful one. --> 
-			<div class="share">
-			<a href=""><img src="images/rebels.svg"></a>
-			<a href=""><img src="images/empire.png"></a>
-			</div>
-		</article>
-	</body>
-</html>	
+				<h3>COSMOS IS ALSO A STORY ABOUT US</h3>
+				<p>
+					It's the saga of how wandering bands of hunters and gathers found their eay to the stars, one adventure with many heroes.
+					kdwjduwehfuewh feuhf ufrehfuer hfuerwhfue rfurehfuerhfuerhfuerhufieruf uuuuuuuuuuuuuuuuuuuuuuuuuuu uuufhefuerfherwufwehfuwifhew ufhwufuhefwehfkjewnfje wfjlerbfherwbfrhjbfq erhbfbfebfrbfqerbfhqbfhjerbfqhj bfhbrfjqrbjbfehjebfhbwjhfbqwe fbqewhfbqwhjbfwhjbfqerh jbfhjqrwbfjw bfjbwfhbwjl wbfhbjlwfblqwbfhbw elbfqhbrfjlhbwjhfbwjhbf jewhbfjhbewjfhbwbfjwhbfwhjb fjhwbfbwfbw hjbfwbfbqwlfbewef bwjhebfjwbfjbwjfbhhjbh bbbhwbfjewjb fewjeb h fhjbfjlqwheb fjhbfjhe fhbw ejfbwelbfhb.
+					<strong>Accept these terms, and the cosmos is yours.</strong>
+				</p>
 
-		<!-- let's use a utility class, to define temporarily css -->
-		<!-- So we define a attribute, in this case a class, that we can use to style -->
-			<!-- <p class="debug-center">ARTICLE</p> --><!-- 
+				<!-- div is a generic container used when there isn't a semantic meaningful one. --> 
+				<div class="share">
+				<a href=""><img src="images/rebels.svg"></a>
+				<a href=""><img src="images/empire.png"></a>
+				</div>
+			</article>
+			<article id="the-cosmos-2">
+				<h1><a href="#the-cosmos-2">The <em>Cosmos</em> is all there is</a></h1>
+				<h2>Or even was, or will ever be</h2>
 
-			<img class="size-4" src="https://mikeorzen.com/wp-content/uploads/2015/10/cosmos.jpg">
-			<img class="size-3" src="https://mikeorzen.com/wp-content/uploads/2015/10/cosmos.jpg">
-			<img class="size-2" src="https://mikeorzen.com/wp-content/uploads/2015/10/cosmos.jpg">
-			<img class="size-1" src="https://mikeorzen.com/wp-content/uploads/2015/10/cosmos.jpg"> -->
+				<time datetime="05-15-2018">MAY 15, 2018</time>
+				<p>
+					<em>A generation ago</em>, the astronomer <a href="https://en.wikipedia.org/wiki/carl_sagan">Carl Sagan</a> stood here and launched hundreds of millions of us on a great adventure: The exploration of the universe by science.
+					It's time to get going again.
+					We're sbout to begin a journey that will take us from the infinitesimal to the infinite, from the dawn of time to the distant future.
+				</p>
+
+				<figure class="size-2">
+					<img src="https://mikeorzen.com/wp-content/uploads/2015/10/cosmos.jpg">
+				</figure>
+
+				<figcaption><p>The <em>Cosmos</em>.</p></figcaption>
+
+				<h3>COSMOS IS ALSO A STORY ABOUT US</h3>
+				<p>
+					It's the saga of how wandering bands of hunters and gathers found their eay to the stars, one adventure with many heroes.
+					kdwjduwehfuewh feuhf ufrehfuer hfuerwhfue rfurehfuerhfuerhfuerhufieruf uuuuuuuuuuuuuuuuuuuuuuuuuuu uuufhefuerfherwufwehfuwifhew ufhwufuhefwehfkjewnfje wfjlerbfherwbfrhjbfq erhbfbfebfrbfqerbfhqbfhjerbfqhj bfhbrfjqrbjbfehjebfhbwjhfbqwe fbqewhfbqwhjbfwhjbfqerh jbfhjqrwbfjw bfjbwfhbwjl wbfhbjlwfblqwbfhbw elbfqhbrfjlhbwjhfbwjhbf jewhbfjhbewjfhbwbfjwhbfwhjb fjhwbfbwfbw hjbfwbfbqwlfbewef bwjhebfjwbfjbwjfbhhjbh bbbhwbfjewjb fewjeb h fhjbfjlqwheb fjhbfjhe fhbw ejfbwelbfhb.
+					<strong>Accept these terms, and the cosmos is yours.</strong>
+				</p>
+
+				<!-- div is a generic container used when there isn't a semantic meaningful one. --> 
+				<div class="share">
+				<a href=""><img src="images/rebels.svg"></a>
+				<a href=""><img src="images/empire.png"></a>
+				</div>
+			</article>
+		</body>
+	</html>	
+
+			<!-- let's use a utility class, to define temporarily css -->
+			<!-- So we define a attribute, in this case a class, that we can use to style -->
+				<!-- <p class="debug-center">ARTICLE</p> --><!-- 
+
+				<img class="size-4" src="https://mikeorzen.com/wp-content/uploads/2015/10/cosmos.jpg">
+				<img class="size-3" src="https://mikeorzen.com/wp-content/uploads/2015/10/cosmos.jpg">
+				<img class="size-2" src="https://mikeorzen.com/wp-content/uploads/2015/10/cosmos.jpg">
+				<img class="size-1" src="https://mikeorzen.com/wp-content/uploads/2015/10/cosmos.jpg"> -->

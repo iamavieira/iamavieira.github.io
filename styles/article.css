@@ -7,14 +7,15 @@ article {
 	/*minmax is there to tell our view to just display the middle section if grid <= 8.5. If it is more, it shows the remainder*/
 	/*If we use a media query there's really no reason to use minmax()*/
 
-	background: linear-gradient(yellow, white 6.55rem);
+	background: linear-gradient(hsla(0,0%,0%, 0.4), white 6.55rem);
 				/*hsl(55, 100%, 96%), the color that he used instead of yellow*/	
 }
+
 article * { grid-column: start / end; } /*1 1fr 2 1fr 3 1fr 4*/ 
 
 
 @media (max-width: 8.5in) {
 
-article { grid-template-columns: 1fr 5% [start] 15% 60% 15% [end] 5% 1fr; }
+	article { grid-template-columns: 1fr 5% [start] 15% 60% 15% [end] 5% 1fr; }
 
 }

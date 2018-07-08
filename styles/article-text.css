@@ -9,10 +9,11 @@ h3			 { font: 700 1.25rem/1.2 "Roboto"; color: hsl(250, 100%, 67%); }
 p 			 { font: 400 1.15rem/1.5 "Roboto"; color: hsl(000, 00%, 33%); }
 figcaption p { font: 400 1.15rem/1.5 "Roboto"; color: hsl(000, 00%, 60%); }
 
-a   {box-shadow: inset 0 -0.25em hsl(55, 100%, 75%);} 
+a:not(.topnav a) {box-shadow: inset 0 -0.25em hsl(55, 100%, 75%);} 
 					 /*y    x axis*/
 /*underline: use box shadow property with a special version of it(i.e. inset)*/
-/*We use em for we want it to be proportional to the font size instead always be the same height(i.e. -0.25rem )*/
+/*We use em when we want it to be proportional to the font size instead always be the same height(i.e. -0.25rem )*/
+
 
 @media (max-width: 8.5in) { :root {font-size: 14px;} }
 @media (max-width: 5in) { :root {font-size: 12px;} }
