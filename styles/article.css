@@ -1,6 +1,6 @@
 article {
 
-	padding: 10% 0; /*The first number is for the bottom and the top while the second number refers to left and right*/
+	padding: 5% 0; /*The first number is for the bottom and the top while the second number refers to left and right*/
 	
 	display: grid;
 	grid-template-columns: 1fr 0.5in [start] 1.25in 5in 1.25in [end] 0.5in 1fr; /*We define three columns. Fr is a fraction unit*/
