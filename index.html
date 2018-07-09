@@ -19,97 +19,10 @@
 			<link rel="stylesheet" href="styles/article-figure.css">
 			<link rel="stylesheet" href="styles/article-text.css">
 			<link rel="stylesheet" href="styles/article-share.css">
+			<link rel="stylesheet" href="styles/topnav.css">
 			<!-- This css we want to keep permantely -->
-			<style>
-				
-				.topnav {
-    				background-color: hsla(0,0%,0%, 0.4);
-    				overflow: hidden;
-    				position: fixed; /* Set the navbar to fixed position */
-    				top: 0; /* Position the navbar at the top of the page */
-    				width: 100%; /* Full width */
-				}
-
-				/* Style the links inside the navigation bar */
-				.topnav a {
-    				 float: right;
-    				 display: block;
-    				 color: #f2f2f2;
-    				 text-align: center;
-    				 padding: 14px 16px;
-    				 text-decoration: none;
-    				 font-size: 17px;
-				}
-
-				.topnav a:hover:not(.active) {
-    				background-color: #ddd;
-    				color: black;
-				}
-
-				.active {    			
-    				background-color: black;
-    				color: black;
-    			}
-
-    			.topnav a:not(.active) {display: none;}
-  				
-  				.topnav a.icon {
-    				float: left;
-   					display: block;
-  				}
-  				.topnav a {
-   					float: none;
-   					text-align: center;
-    			}
-    			
-    			.topnav.responsive {position: fixed; /* Set the navbar to fixed position */
-    				top: 0; /* Position the navbar at the top of the page */
-    				width: 100%; /* Full width */}
-  				
-  				.topnav.responsive .icon {
-    				position: absolute;
-    				left: 0;
-    				top: 0;
-  				}	
-  				
-  				.topnav.responsive a {
-    				float: none;
-    				display: block;  					
-    				text-align: center;
-    			}
-
-
-    			 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-				/*@media screen and (max-width: 8.5in) {
-  					.topnav a:not(.active) {display: none;}
-  					.topnav a.icon {
-    					float: left;
-    					display: block;
-  					}
-  					.topnav a {
-    					float: none;
-    					text-align: center;
-    				}
-				}*/
-
-				
-				/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes 	the topnav look good on small screens (display the links vertically instead of horizontally) */
-				/*@media screen and (max-width: 8.5in) {
- 					.topnav.responsive {position: relative;}
-  					.topnav.responsive .icon {
-    					position: absolute;
-    					left: 0;
-    					top: 0;
-  					}	
-  					.topnav.responsive a {
-    					float: none;
-    					display: block;
-    					text-align: center;
-    				}			
-				}*/ 
-
-			</style>
-			
+			<style></style>			
+			<!-- This is the script section, where you can write or import scripts. You might also have this section within the body-->
 			<script type="text/javascript" src="scripts/topnav.js"></script>
 		
 		</head>
@@ -120,10 +33,11 @@
 				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
     				<i class="fa fa-bars"></i>
    				</a>
-   				<a href="#home" class="active">Home</a>
-   				<a href="#news">News</a>
-				<a href="#contact">Contact</a>				
-				<a href="#about">About</a>  
+   				<a href="#blog" class="active">Blog</a>
+   				<a href="https://github.com/iamavieira"><i class="fab fa-github"></i></a>							
+				<a href="https://twitter.com/iamavieira"><i class="fab fa-twitter"></i></a>
+				<a href="https://linkedin.com/in/avieiraal"><i class="fab fa-linkedin-in"></i></a>				
+				<a href="cv/AlexVieiraAlencar_Profile.pdf"><i class="far fa-file-pdf"></i> CV</a>  
 
 			</div>
 
