@@ -2,10 +2,10 @@
 /*it discriminate the last paragraph for each element and not the last paragraph in the entire html file*/
 h2, p {margin-bottom: 2.4rem}
 
-h1  		 { font: 700 2.0rem/1.2 "Roboto";  color: hsl(58, 79%, 47%); }
-h2			 { font: 400 1.5rem/1.2 "Roboto";  color: hsl(000, 00%, 33%); }
+h1  		 { font: 700 2.0rem/1.2 "Roboto";  color: hsl(292, 92%, 54%); }
+h2			 { font: 400 1.5rem/1.2 "Roboto";  color: hsl(250, 100%, 67%); }
 time		 { font: 700 1.25rem/1.2 "Roboto"; color: hsl(250, 100%, 80%); }
-h3			 { font: 700 1.25rem/1.2 "Roboto"; color: hsl(250, 100%, 67%); }
+h3			 { font: 700 1.25rem/1.2 "Roboto"; color: hsl(250, 100%, 80%); }
 p 			 { font: 400 1.15rem/1.5 "Roboto"; color: hsl(000, 00%, 33%); }
 figcaption p { font: 400 1.15rem/1.5 "Roboto"; color: hsl(000, 00%, 60%); }
 
