@@ -1,4 +1,3 @@
-# iamavieira.github.io
+# [iamavieira.com](https://iamavieira.com/)
 This is my personal website
 
-https://iamavieira.github.io
